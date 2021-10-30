@@ -1,13 +1,42 @@
+//use std::env;
 use std::time::{Instant};
-//use std::io::{self, BufRead};
+use std::io::{self, BufRead};
+
 
 fn main() {
-    // 実行時間の計測
+    // 経過時間の取得
     let start = Instant::now();
+    let stdin = io::stdin();
 
-    println!("Hello, world!");
+    let mut  _i =0;
+
+    for _line in stdin.lock().lines() {
+        _i = _i + 1;
+       // println!("{}", _line.unwrap());
+   }
+        println!();
+        println!("{}", _i);
+        println!();
+
+//    let args: Vec<String> = env::args().collect();
+//    println!("{}",args[1]);
+//    println!("");
+//    println!("pseinfo -rfd");
+
+/*
+    let mut s: String = String::new();
+    let result: std::io::Result<usize> = std::io::stdin().read_line(&mut s);
+    match result {
+        Ok(_) => {
+            println!("{}", s);
+        }
+        Err(err) => {
+            println!("{}", err);
+        }
+    }
+
+*/
 
     let end = start.elapsed();
-    println!();
     println!("{}.{:03}秒経過しました。", end.as_secs(), end.subsec_nanos() / 1_000_000);
 }

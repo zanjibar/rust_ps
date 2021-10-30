@@ -1,5 +1,7 @@
 # memo
 
+```rust:sample.rs
+
 use std::io::{self, BufRead};
 
 fn main() {
@@ -8,3 +10,7 @@ fn main() {
         println!("{}", line.unwrap());
     }
 }
+```
+
+
+## xxx
