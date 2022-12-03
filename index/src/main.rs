@@ -23,19 +23,7 @@ fn main() {
 //    println!("");
 //    println!("pseinfo -rfd");
 
-/*
-    let mut s: String = String::new();
-    let result: std::io::Result<usize> = std::io::stdin().read_line(&mut s);
-    match result {
-        Ok(_) => {
-            println!("{}", s);
-        }
-        Err(err) => {
-            println!("{}", err);
-        }
-    }
 
-*/
 
     let end = start.elapsed();
     println!("{}.{:03}秒経過しました。", end.as_secs(), end.subsec_nanos() / 1_000_000);
